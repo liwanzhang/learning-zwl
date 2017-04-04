@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="yitian.study.dao.mapper">
+    <select id="selectPerson"
+            resultType="Person" parameterType="Person">
+        SELECT *
+        FROM Person
+        WHERE id = #{id}
+    </select>
+    <select id="selectPersonByName"
+            resultType="Person">
+        SELECT *
+        FROM Person
+        WHERE username = #{username}
+    </select>
+    <insert id="insertPerson"
+            useGeneratedKeys="true">
+        INSERT INTO Person (username, birthday) VALUES (#{username}, #{birthday})
+    </insert>
+    <update id="updatePerson">
+        UPDATE Person
+        SET birthday = #{birthday}
+        WHERE id = #{id}
+    </update>
+    <delete id="deletePerson">
+        DELETE FROM Person
+        WHERE id = #{id}
+    </delete>
+</mapper>
