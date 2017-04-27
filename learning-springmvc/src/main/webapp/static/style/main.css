@@ -1,0 +1,26 @@
+
+/** grid header sort */
+.gridBody th.sort {
+}
+.gridBody th.sort.desc {
+    background: url(../images/sort_desc.gif) center right no-repeat
+}
+.gridBody th.sort.asc {
+    background: url(../images/sort_asc.gif) center right no-repeat
+}
+
+/** mouse hove over sort header */
+.gridBody .tableHeaderSortHover {
+    background-color: #f5f5f5 !important;
+    text-decoration: underline;
+    cursor: pointer;
+}
+.table{
+    font-size: 13px;
+}
+.table .gridBody thead .th{
+    text-align:center !important;
+}
+#query input,label{
+    font-size: 13px;
+}
